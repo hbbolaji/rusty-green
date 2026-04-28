@@ -32,15 +32,36 @@ fn main() {
     numbers_borrowed.push_str(", 3");
 
     let mut alphabet = String::from("a");
-    alphabet.push_str(", b");
     let observer = &alphabet;
     println!("Current alphabet string: {}", observer);
+    println!("using {}", observer);
+    alphabet.push_str(", b");
 
     let outer_scope_ref: &String;
     {
         let inner_scop_string = String::from("inner scope");
         outer_scope_ref = &inner_scop_string;
+        println!("{}", outer_scope_ref)
     }
 
     // println!("Scoped string is {}", outer_scope_ref);
+
+    let mut s1 = String::from("s1");
+    mutable_borrow(&mut s1);
+    immutable_borrow(&s1);
+    println!("{} returning for immutable borrow", s1);
+    transfer_ownership(s1);
+}
+
+fn transfer_ownership(input: String) {
+    println!("Transfer owenership of {}", input)
+}
+
+fn immutable_borrow(input: &String) {
+    println!("Immutably borrowed {}", input)
+}
+
+fn mutable_borrow(input: &mut String) {
+    input.push_str("_mut");
+    println!("Updated: {}", input)
 }
