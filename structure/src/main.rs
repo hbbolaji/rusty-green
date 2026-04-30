@@ -18,6 +18,10 @@ impl Creature {
         self.health -= opp.dmg;
         opp.health -= self.dmg;
     }
+
+    fn new(name: String, max_health: i32, dmg: i32) -> Self {
+        Self { name, health: max_health, max_health, dmg }
+    }
 }
 
 fn main() {
@@ -35,13 +39,19 @@ fn main() {
         dmg: 5
     };
 
+    let mut pikachu = Creature::new("Pikachu".into(), 1, 1);
+
     minator.print_status();
     goblin.print_status();
+    pikachu.print_status();
 
     println!("{} is fighting {}...", minator.name, goblin.name);
     minator.fight_creature(&mut goblin);
+    println!("{} is fighting {}...", minator.name, pikachu.name);
+    minator.fight_creature(&mut pikachu);
 
     minator.print_status();
     goblin.print_status(); 
+    pikachu.print_status(); 
 }
 
