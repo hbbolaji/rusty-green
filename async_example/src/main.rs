@@ -1,6 +1,9 @@
 #![allow(dead_code, unused_variables)]
 
-use std::{error::Error, time::{Duration, Instant}};
+use std::{
+    error::Error,
+    time::{Duration, Instant},
+};
 
 use reqwest::StatusCode;
 
@@ -8,7 +11,10 @@ use reqwest::StatusCode;
 async fn main() -> Result<(), Box<dyn Error>> {
     let start_time = Instant::now();
     tokio::spawn(heart_beat(0));
-    let (status_1, status_2) = tokio::join!(get_status("https://google.github.io/comprehensive-rust/index.html"), get_status("https://google.github.io/comprehensive-rust/types-and-values.html"));
+    let (status_1, status_2) = tokio::join!(
+        get_status("https://google.github.io/comprehensive-rust/index.html"),
+        get_status("https://google.github.io/comprehensive-rust/types-and-values.html")
+    );
     println!("Status 1: {}", status_1.unwrap());
     println!("Status 2: {}", status_2.unwrap());
     println!(
