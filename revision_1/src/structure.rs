@@ -1,6 +1,6 @@
+#![allow(unused)]
 use std::cell::Cell;
 
-#[allow(dead_code)]
 #[derive(Debug)]
 enum VehicleColor {
     Silver,
