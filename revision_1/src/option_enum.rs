@@ -7,9 +7,9 @@ pub fn test_option() -> Option<u8> {
 
 #[derive(Debug)]
 pub enum CharacterType {
-  Archer,
-  Warrior,
-  Mage
+    Archer,
+    Warrior,
+    Mage,
 }
 
 impl ToString for CharacterType {
@@ -17,14 +17,15 @@ impl ToString for CharacterType {
         match self {
             Self::Archer => "Archer",
             Self::Mage => "Mage",
-            Self::Warrior => "Warrior"
-        }.into()
+            Self::Warrior => "Warrior",
+        }
+        .into()
     }
 }
 
 pub fn test_option_chartype() -> Option<CharacterType> {
-  let mut chartype: Option<CharacterType> = None;
-  println!("{:?} character has been choosen", chartype);
-  chartype = Some(CharacterType::Mage);
-  chartype
+    let mut chartype: Option<CharacterType> = None;
+    println!("{:?} character has been choosen", chartype);
+    chartype = Some(CharacterType::Mage);
+    chartype
 }
