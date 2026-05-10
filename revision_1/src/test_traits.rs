@@ -28,7 +28,7 @@ trait NotDangerous {}
 
 pub fn create_person() {
     let pet1 = Dog {};
-    let pets: Vec<Box<dyn Animal>> = vec![Box::from(Dog{}), Box::from(Cat{})];
+    let pets: Vec<Box<dyn Animal>> = vec![Box::from(Dog {}), Box::from(Cat {})];
     pet1.make_sound("bark");
     let person_1 = Person {
         firstname: "luke".into(),
