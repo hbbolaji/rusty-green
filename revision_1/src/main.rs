@@ -6,7 +6,7 @@ use crate::{
     structure::{create_vehicle, test_create_user},
 };
 use crate::{
-    myhash::test_hashmap_basic,
+    myhash::{test_hashmap_basic, test_hashset_type},
     myvec::{test_vec_int, test_vec_string, test_vect_car},
     test_traits::create_person,
 };
@@ -40,5 +40,6 @@ fn main() {
     // test_vec_string();
     // test_vect_car();
 
-    test_hashmap_basic();
+    // test_hashmap_basic();
+    test_hashset_type();
 }
