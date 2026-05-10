@@ -1,6 +1,21 @@
 use std::cell::Cell;
 
 #[allow(dead_code)]
+#[derive(Debug)]
+enum VehicleColor {
+    Silver,
+    Black,
+    White,
+    Red,
+    Blue,
+}
+
+impl Copy for VehicleColor {}
+impl Clone for VehicleColor {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
 struct Person<'p> {
     active: bool,
     username: Cell<&'p str>,
@@ -13,20 +28,25 @@ struct Vehicle {
     manufacturer: String,
     model: String,
     year: u16,
-    color: VehicleColor,
+    color: Cell<VehicleColor>,
+}
+
+impl Vehicle {
+    fn new(manufacturer: String, model: String, year: u16, color: Cell<VehicleColor>) -> Self {
+        Self {
+            manufacturer,
+            model: model,
+            year: year,
+            color: color,
+        }
+    }
+    fn paint(&self, color: VehicleColor) {
+        self.color.set(color);
+    }
 }
 
 #[derive(Debug)]
 struct Color(u8, u8, u8);
-
-#[derive(Debug)]
-enum VehicleColor {
-    Silver,
-    Black,
-    White,
-    Red,
-    Blue,
-}
 
 fn new_person() -> Person<'static> {
     let p1 = Person {
@@ -39,12 +59,19 @@ fn new_person() -> Person<'static> {
 }
 
 fn new_vehicle() -> Vehicle {
-    let v1 = Vehicle {
-        manufacturer: "Hyundai".into(),
-        model: "Sonata".into(),
-        year: 2015,
-        color: VehicleColor::Black,
-    };
+    // let v1 = Vehicle {
+    //     manufacturer: "Hyundai".into(),
+    //     model: "Sonata".into(),
+    //     year: 2015,
+    //     color: Cell::from(VehicleColor::Black),
+    // };
+    let v1 = Vehicle::new(
+        "Lexus".to_string(),
+        "Rx 350h".into(),
+        2026,
+        Cell::from(VehicleColor::Silver),
+    );
+    v1.paint(VehicleColor::Blue);
     return v1;
 }
 
