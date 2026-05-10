@@ -1,4 +1,4 @@
-use crate::test_traits::create_person;
+use crate::{myvec::{test_vec_int, test_vec_string, test_vect_car}, test_traits::create_person};
 #[allow(unused_imports)]
 use crate::{
     closure::test_closures,
@@ -12,6 +12,7 @@ pub mod option_enum;
 pub mod pattern_matching;
 pub mod structure;
 pub mod test_traits;
+pub mod myvec;
 
 fn main() {
     // test_closures();
@@ -26,5 +27,8 @@ fn main() {
     //     "{:?} is the selected character",
     //     character.unwrap().to_string()
     // );
-    create_person()
+    // create_person()
+    test_vec_int();
+    test_vec_string();
+    test_vect_car();
 }
