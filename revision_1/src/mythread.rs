@@ -30,16 +30,15 @@ pub fn test_spawn_thread() {
         println!("The value of x in thread 2 is {x}")
     });
 
-    
     // handle_1.join();
     // handle_2.join();
-    
+
     loop {
-      test_threads();
-      if handle_1.is_finished() && handle_2.is_finished() {
-        println!("All workers are done, let's get out of here");
-        break;
-      }
+        test_threads();
+        if handle_1.is_finished() && handle_2.is_finished() {
+            println!("All workers are done, let's get out of here");
+            break;
+        }
     }
 
     println!(
