@@ -4,6 +4,7 @@ use crate::{
     mydatetime::{test_chrono, test_std_time},
     myhash::{test_hashmap_basic, test_hashset_type},
     myiter::test_rust_iterators,
+    mythread::{test_spawn_thread, test_threads},
     myvec::{test_vec_int, test_vec_string, test_vect_car},
     option_enum::{test_option, test_option_chartype},
     pattern_matching::{test_match_array, test_match_int},
@@ -15,6 +16,7 @@ pub mod closure;
 pub mod mydatetime;
 pub mod myhash;
 pub mod myiter;
+pub mod mythread;
 pub mod myvec;
 pub mod option_enum;
 pub mod pattern_matching;
@@ -46,6 +48,9 @@ fn main() {
     // test_hashset_type();
     // test_rust_iterators();
 
-    test_std_time();
-    test_chrono();
+    // test_std_time();
+    // test_chrono();
+
+    // test_threads();
+    test_spawn_thread();
 }

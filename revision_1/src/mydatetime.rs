@@ -21,9 +21,9 @@ pub fn test_std_time() {
 }
 
 pub fn test_chrono() {
-  let local_now = chrono::Local::now();
-  println!("UTC time: {}", local_now.format("%A %d %Y, %B: %H"));
+    let local_now = chrono::Local::now();
+    println!("UTC time: {}", local_now.format("%A %d %Y, %B: %H"));
 
-  // let date_1 = NaiveDate::from_isoywd_opt(1997, 43, chrono::Weekday::Thu).unwrap();
-  // println!("Day of the year is {}", date_1.format("%A %d %Y, %B: %H"))
+    // let date_1 = NaiveDate::from_isoywd_opt(1997, 43, chrono::Weekday::Thu).unwrap();
+    // println!("Day of the year is {}", date_1.format("%A %d %Y, %B: %H"))
 }
