@@ -1,18 +1,18 @@
-#[allow(unused_imports)]
+#![allow(unused)]
 use crate::{
     closure::test_closures,
-    option_enum::{test_option, test_option_chartype},
-    pattern_matching::{test_match_array, test_match_int},
-    structure::{create_vehicle, test_create_user},
-};
-use crate::{
+    mydatetime::{test_chrono, test_std_time},
     myhash::{test_hashmap_basic, test_hashset_type},
     myiter::test_rust_iterators,
     myvec::{test_vec_int, test_vec_string, test_vect_car},
+    option_enum::{test_option, test_option_chartype},
+    pattern_matching::{test_match_array, test_match_int},
+    structure::{create_vehicle, test_create_user},
     test_traits::create_person,
 };
 
 pub mod closure;
+pub mod mydatetime;
 pub mod myhash;
 pub mod myiter;
 pub mod myvec;
@@ -44,5 +44,8 @@ fn main() {
 
     // test_hashmap_basic();
     // test_hashset_type();
-    test_rust_iterators();
+    // test_rust_iterators();
+
+    test_std_time();
+    test_chrono();
 }

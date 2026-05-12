@@ -29,7 +29,7 @@ pub fn test_rust_iterators() {
             return e;
         })
         .for_each(|e| println!("{}", e));
-    
+
     let first_names = vec!["Hashim", "Zaid", "Ibrahim", "Muhsin"];
     let first_name_strings = first_names.iter().map(|e| String::from(*e));
 
@@ -40,7 +40,7 @@ pub fn test_rust_iterators() {
     full_names.clone().for_each(|e| println!("{} {}", e.0, e.1));
 
     for (index, value) in full_names.enumerate() {
-      println!("Index: {}, value: {}, {}", index, value.0, value.1)
+        println!("Index: {}, value: {}, {}", index, value.0, value.1)
     }
 
     let foods = vec![("Potatoes", 21), ("Yam", 3), ("Rice", 6)];
@@ -52,4 +52,4 @@ pub fn test_rust_iterators() {
     // take(num_to_take)
     // fold() -> similar to js reduce, initial
     // peakable().peek()
-} 
+}
