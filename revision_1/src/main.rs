@@ -7,12 +7,14 @@ use crate::{
 };
 use crate::{
     myhash::{test_hashmap_basic, test_hashset_type},
+    myiter::test_rust_iterators,
     myvec::{test_vec_int, test_vec_string, test_vect_car},
     test_traits::create_person,
 };
 
 pub mod closure;
 pub mod myhash;
+pub mod myiter;
 pub mod myvec;
 pub mod option_enum;
 pub mod pattern_matching;
@@ -41,5 +43,6 @@ fn main() {
     // test_vect_car();
 
     // test_hashmap_basic();
-    test_hashset_type();
+    // test_hashset_type();
+    test_rust_iterators();
 }

@@ -28,25 +28,25 @@ pub fn test_hashmap_basic() {
 }
 
 pub fn test_hashset_type() {
-  let mut planet_list = HashSet::from(["Mercury", "Venus", "Earth"]);
-  for planet in &planet_list {
-    println!("Thanks for adding {}", planet);
-  }
+    let mut planet_list = HashSet::from(["Mercury", "Venus", "Earth"]);
+    for planet in &planet_list {
+        println!("Thanks for adding {}", planet);
+    }
 
-  let planet_list_more = HashSet::from(["Earth", "Mars", "Jupiter"]);
-  let planet_diff = planet_list.difference(&planet_list_more);
-  for planet in planet_diff {
-    println!("Diff: Thanks for adding {}", planet);
-  }
+    let planet_list_more = HashSet::from(["Earth", "Mars", "Jupiter"]);
+    let planet_diff = planet_list.difference(&planet_list_more);
+    for planet in planet_diff {
+        println!("Diff: Thanks for adding {}", planet);
+    }
 
-  let planet_sym_diff = planet_list.symmetric_difference(&planet_list_more);
-  for planet in planet_sym_diff {
-    println!("sym diff: Thanks for adding {}", planet);
-  }
+    let planet_sym_diff = planet_list.symmetric_difference(&planet_list_more);
+    for planet in planet_sym_diff {
+        println!("sym diff: Thanks for adding {}", planet);
+    }
 
-  planet_list.insert("Saturn");
-  planet_list.insert("Uranus");
-  planet_list.insert("Neptune");
-  planet_list.insert("Pluto");
-  println!("{:?}", planet_list)
+    planet_list.insert("Saturn");
+    planet_list.insert("Uranus");
+    planet_list.insert("Neptune");
+    planet_list.insert("Pluto");
+    println!("{:?}", planet_list)
 }
