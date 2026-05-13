@@ -1,6 +1,7 @@
 #![allow(unused)]
 use crate::{
     closure::test_closures,
+    mychannel::test_channels,
     mydatetime::{test_chrono, test_std_time},
     myhash::{test_hashmap_basic, test_hashset_type},
     myiter::test_rust_iterators,
@@ -15,6 +16,7 @@ use crate::{
 };
 
 pub mod closure;
+pub mod mychannel;
 pub mod mydatetime;
 pub mod myhash;
 pub mod myiter;
@@ -58,5 +60,6 @@ fn main() {
     // test_threads();
     // test_spawn_thread();
     // test_thread_variables();
-    test_mutext();
+    // test_mutext();
+    // test_channels();
 }
