@@ -3,6 +3,7 @@ use crate::{
     closure::test_closures,
     mychannel::test_channels,
     mydatetime::{test_chrono, test_std_time},
+    myfs::{test_create_dir, test_create_files, test_read_somefile, test_remove_dir},
     myhash::{test_hashmap_basic, test_hashset_type},
     myiter::test_rust_iterators,
     mymutex::test_mutext,
@@ -18,6 +19,7 @@ use crate::{
 pub mod closure;
 pub mod mychannel;
 pub mod mydatetime;
+pub mod myfs;
 pub mod myhash;
 pub mod myiter;
 pub mod mymutex;
@@ -62,4 +64,9 @@ fn main() {
     // test_thread_variables();
     // test_mutext();
     // test_channels();
+
+    // test_create_dir();
+    // test_create_files();
+    // test_remove_dir();
+    test_read_somefile();
 }
