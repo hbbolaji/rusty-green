@@ -1,19 +1,6 @@
 #![allow(unused)]
 use crate::{
-    closure::test_closures,
-    mychannel::test_channels,
-    mydatetime::{test_chrono, test_std_time},
-    myfs::{test_create_dir, test_create_files, test_read_somefile, test_remove_dir},
-    myhash::{test_hashmap_basic, test_hashset_type},
-    myiter::test_rust_iterators,
-    mymutex::test_mutext,
-    myscopethreads::test_thread_variables,
-    mythread::{test_spawn_thread, test_threads},
-    myvec::{test_vec_int, test_vec_string, test_vect_car},
-    option_enum::{test_option, test_option_chartype},
-    pattern_matching::{test_match_array, test_match_int},
-    structure::{create_vehicle, test_create_user},
-    test_traits::create_person,
+    closure::test_closures, myargs::test_args, mychannel::test_channels, mydatetime::{test_chrono, test_std_time}, myfs::{test_create_dir, test_create_files, test_read_somefile, test_remove_dir}, myhash::{test_hashmap_basic, test_hashset_type}, myiter::test_rust_iterators, mymutex::test_mutext, myscopethreads::test_thread_variables, mythread::{test_spawn_thread, test_threads}, myvec::{test_vec_int, test_vec_string, test_vect_car}, option_enum::{test_option, test_option_chartype}, pattern_matching::{test_match_array, test_match_int}, structure::{create_vehicle, test_create_user}, test_traits::create_person
 };
 
 pub mod closure;
@@ -30,6 +17,7 @@ pub mod option_enum;
 pub mod pattern_matching;
 pub mod structure;
 pub mod test_traits;
+pub mod myargs;
 
 fn main() {
     // test_closures();
@@ -68,5 +56,7 @@ fn main() {
     // test_create_dir();
     // test_create_files();
     // test_remove_dir();
-    test_read_somefile();
+    // test_read_somefile();
+
+    test_args();
 }
