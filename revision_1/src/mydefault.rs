@@ -37,6 +37,6 @@ pub fn test_default_impl() {
   // let mut person_3 = 
   person_1.location = "London, UK".into();
   person_2.location = "Zanzibar, TZ".into();
-  println!("{:?}", person_1.lastname.0);
+  println!("{:?}", person_1);
   println!("{:?}", person_2);
 }
