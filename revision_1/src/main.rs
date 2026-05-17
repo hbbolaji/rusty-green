@@ -6,6 +6,7 @@ use crate::{
     mydatetime::{test_chrono, test_std_time},
     mydefault::test_default_impl,
     myfs::{test_create_dir, test_create_files, test_read_somefile, test_remove_dir},
+    mygroceries::test_groceries,
     myhash::{test_hashmap_basic, test_hashset_type},
     myiter::test_rust_iterators,
     mymutex::test_mutext,
@@ -38,6 +39,7 @@ pub mod myargs;
 pub mod test_trait;
 pub mod mydefault;
 pub mod myops;
+pub mod mygroceries;
 
 fn main() {
     // test_closures();
@@ -82,6 +84,7 @@ fn main() {
     
     // test_dyn_traits();
     
-    test_default_impl();
-    test_custom_ops()
+    // test_default_impl();
+    // test_custom_ops();
+    test_groceries();
 }
