@@ -18,28 +18,28 @@ use crate::{
     pattern_matching::{test_match_array, test_match_int},
     structure::{create_vehicle, test_create_user},
     test_trait::test_dyn_traits,
-    test_traits::create_person
+    test_traits::create_person,
 };
 
 pub mod closure;
+pub mod myargs;
 pub mod mychannel;
 pub mod mydatetime;
+pub mod mydefault;
 pub mod myfs;
+pub mod mygroceries;
 pub mod myhash;
 pub mod myiter;
 pub mod mymutex;
+pub mod myops;
 pub mod myscopethreads;
 pub mod mythread;
 pub mod myvec;
 pub mod option_enum;
 pub mod pattern_matching;
 pub mod structure;
-pub mod test_traits;
-pub mod myargs;
 pub mod test_trait;
-pub mod mydefault;
-pub mod myops;
-pub mod mygroceries;
+pub mod test_traits;
 
 fn main() {
     // test_closures();
@@ -81,9 +81,9 @@ fn main() {
     // test_read_somefile();
 
     // test_args();
-    
+
     // test_dyn_traits();
-    
+
     // test_default_impl();
     // test_custom_ops();
     test_groceries();
