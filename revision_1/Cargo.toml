@@ -6,3 +6,5 @@ edition = "2024"
 [dependencies]
 chrono = "0.4.44"
 clap = { version = "4.6.1", features = ["cargo"] }
+futures = "0.3.32"
+smol = "2.0.2"

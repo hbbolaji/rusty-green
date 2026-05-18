@@ -1,7 +1,8 @@
-#![allow(unused_imports)]
+#![allow(unused)]
 use crate::{
     closure::test_closures,
     myargs::test_args,
+    myasync::test_async,
     mychannel::test_channels,
     mydatetime::{test_chrono, test_std_time},
     mydefault::test_default_impl,
@@ -23,6 +24,7 @@ use crate::{
 
 pub mod closure;
 pub mod myargs;
+pub mod myasync;
 pub mod mychannel;
 pub mod mydatetime;
 pub mod mydefault;
@@ -86,5 +88,7 @@ fn main() {
 
     // test_default_impl();
     // test_custom_ops();
-    test_groceries();
+    // test_groceries();
+
+    test_async();
 }
