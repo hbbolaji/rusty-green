@@ -12,6 +12,7 @@ use crate::{
     myiter::test_rust_iterators,
     mymutex::test_mutext,
     myops::test_custom_ops,
+    myprocess::test_external_process,
     myscopethreads::test_thread_variables,
     mythread::{test_spawn_thread, test_threads},
     myvec::{test_vec_int, test_vec_string, test_vect_car},
@@ -34,6 +35,7 @@ pub mod myhash;
 pub mod myiter;
 pub mod mymutex;
 pub mod myops;
+pub mod myprocess;
 pub mod myscopethreads;
 pub mod mythread;
 pub mod myvec;
@@ -90,5 +92,7 @@ fn main() {
     // test_custom_ops();
     // test_groceries();
 
-    test_async();
+    // test_async();
+
+    test_external_process();
 }
