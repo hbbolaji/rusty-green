@@ -1,6 +1,15 @@
 
 
 use csv::{Reader, ReaderBuilder};
+use serde::Deserialize;
+
+#[derive(Deserialize, Debug)]
+struct User {
+  id: String,
+  name: String,
+  email: String,
+  created_at: String
+}
 
 fn main() {
   let file_name = "./data.csv";
@@ -17,7 +26,9 @@ fn main() {
   
   let mut my_reader = result.unwrap();
   println!("{:?}", my_reader.headers().unwrap());
-  for record in my_reader.records() {
-    println!("your name is : {:?}", record.unwrap().get(2).unwrap())
+  for record in my_reader.deserialize() {
+    let person: User = record.unwrap();
+    println!("your name is :{}", person.name);
+    // println!("your name is : {:?}", record.unwrap().get(2).unwrap())
   }
 }
